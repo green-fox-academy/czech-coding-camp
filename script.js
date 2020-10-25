@@ -5,8 +5,47 @@ let post = {
     comments: ["comment1", "comment2"]
 }
 
+post.title;
+let text = "this is text";
+text.length;
+text.charAt(5);
+
 console.log(post);
 console.log(post.comments);
+
+let greeter = name => {
+    console.log("Hello, "+name);
+}
+
+// JQuery
+
+//$(selector).action
+$('div').text("hello world from jquery");
+$('div').css('color', 'red');
+$('div').css('background-color', 'black');
+let score = $('#score').text();
+score++;
+$('#score').text(score);
+
+$('.first').toggleClass('hidden');
+
+$('p:last').html("<strong>text was changed</strong>");
+
+$('p:last').append("another text");
+
+$('.fourth').remove();
+
+// events
+
+$('button').click(e =>{
+    score++;
+    $('#score').text(score);
+    console.log(e);
+})
+
+$('.second').click(function(){
+    greeter("Amy");
+});
 
 // loops
 
@@ -29,6 +68,42 @@ console.log("--------------------");
 array.forEach(element => {
     console.log(element);
 });
+
+console.log("--------------------");
+// functions
+
+//f(x)=x*x
+
+let myFunction = x => {
+    console.log(x*x);
+}
+
+myFunction(85);
+
+console.log("--------------------");
+
+
+array.forEach(myFunction);
+
+
+console.log("--------------------");
+
+/* let greeter = name => {
+    console.log("Hello, "+name);
+} */
+
+greeter("Amy");
+
+console.log("hello, Amy");
+console.log("hello, Tomas");
+console.log("hello, Lukas");
+
+function greeterV2(name){
+    console.log("Hello, "+name);
+}
+
+greeterV2("Amy");
+
 // conditions
 
 let age = 25;
